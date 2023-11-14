@@ -8,7 +8,7 @@ services:
       - MYSQL_DATABASE=$MYSQL_DATABASE
       - MYSQL_TCP_PORT=$MYSQL_DOCKER_PORT
     volumes:
-      - ./src/database/sql:/docker-entrypoint-initdb.d
+      - ./backEnd/src/database/sql:/docker-entrypoint-initdb.d
     ports:
       - $MYSQL_LOCAL_PORT:$MYSQL_DOCKER_PORT
     expose:
@@ -19,7 +19,7 @@ services:
       retries: 10
       start_period: 30s
   api:
-    build: .
+    build: ./backEnd
     environment:
       - MYSQL_HOST=mysqldb
     ports:
@@ -27,3 +27,9 @@ services:
     depends_on:
       mysqldb:
         condition: service_healthy
+  react:
+    build: ./frontEnd
+    ports:
+      - "8000:8000"
+    depends_on:
+      - api
