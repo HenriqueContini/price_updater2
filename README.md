@@ -47,7 +47,7 @@ Obs: É necessário que as portas: 3000, 3307 e 8000 estejam disponíveis.
 ### 3. Acessando o site
 Para acessar o site, basta acessar no navegador: `http://localhost:8000/`.
 
-Na pasta raíz do projeto, existe 2 arquivos .csv com exemplos de novos preços de produtos que podem ser usados para testar aplicação.
+Na pasta raíz do projeto, existe 2 arquivos .csv com exemplos de novos preços de produtos que podem ser usados para testar a aplicação. Utilize primeiro o .csv com problema e depois o ok, assim, você garante uma experência melhor.
 
 ## 🖼️ Spoiler
 ![image](https://github.com/HenriqueContini/price_updater/assets/81761545/d6f49a8f-1eac-4906-85af-f89b4e8cfe0b)
